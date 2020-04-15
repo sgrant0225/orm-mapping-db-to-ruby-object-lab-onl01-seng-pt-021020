@@ -104,6 +104,8 @@ class Student
     sql = <<-SQL 
     SELECT * FROM students;
     SQL
-    
+    DB[:conn].execute(sql, x).collect do |i|
+      self.new_from_db(i)
+    end
   end  
 end
