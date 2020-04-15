@@ -80,5 +80,7 @@ class Student
      self.new_from_db(i)
     end
   end
+  
+  def 
  
 end
