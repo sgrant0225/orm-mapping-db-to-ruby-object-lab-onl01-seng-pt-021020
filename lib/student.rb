@@ -77,6 +77,7 @@ class Student
    SELECT * FROM students WHERE grade > 12
    SQL
    DB[:conn].execute(sql).size
+   binding.pry
   end
  
 end
