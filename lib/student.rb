@@ -79,6 +79,7 @@ class Student
    DB[:conn].execute(sql).collect do |i|
      
    binding.pry
+    end
   end
  
 end
