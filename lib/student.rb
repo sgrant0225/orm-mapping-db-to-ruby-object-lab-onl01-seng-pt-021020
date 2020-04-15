@@ -74,7 +74,6 @@ class Student
   
   def self.students_below_12th_grade 
    sql = SELECT * FROM students WHERE grade > 12     #<<-SQL 
-   #SELECT * FROM students WHERE grade > 12
    #SQL
    DB[:conn].execute(sql)
    binding.pry
