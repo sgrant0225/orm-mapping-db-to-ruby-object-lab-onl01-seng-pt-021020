@@ -96,7 +96,7 @@ class Student
    SELECT * students WHERE grade = 10 LIMIT 1;
    SQL
    DB[:conn].execute(sql).collect do |i|
-     self.new_from_db(i).first
-    end
+     self.new_from_db(i)
+    end.first
    end 
 end
