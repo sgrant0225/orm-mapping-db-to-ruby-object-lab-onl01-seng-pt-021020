@@ -77,8 +77,8 @@ class Student
    SELECT * FROM students WHERE grade > 12  
    SQL
    DB[:conn].execute(sql).collect do |i|
-     i
-   
+     self.new_from_db(i)
+   binding.pry
     end
   end
  
