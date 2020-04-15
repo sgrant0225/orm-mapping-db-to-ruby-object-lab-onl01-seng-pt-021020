@@ -86,7 +86,8 @@ class Student
    sql = <<-SQL
    SELECT * FROM students WHERE grade = 10 LIMIT ?;
    SQL
-   DB[:conn].execute(sql, num)
+   DB[:conn].execute(sql, num).collect do |i|
+     self.new_from_db(i)
   end  
   sql = <<-SQL
           SELECT * FROM students WHERE grade = 10 LIMIT ?;
