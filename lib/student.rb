@@ -81,6 +81,6 @@ class Student
     end
   end
   
-  def 
+  def self.first
  
 end
