@@ -102,11 +102,11 @@ class Student
    
   def self.all_students_in_grade_X(x)
     sql = <<-SQL 
-    SELECT * FROM students;
+    SELECT * FROM students
     SQL
     DB[:conn].execute(sql, x).collect do |i|
       self.new_from_db(i)
-      binding.pry
+      
     end
   end  
 end
