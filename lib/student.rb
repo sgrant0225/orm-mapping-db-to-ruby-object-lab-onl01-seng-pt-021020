@@ -76,7 +76,7 @@ class Student
    sql = "SELECT * FROM students WHERE grade > 12"     #<<-SQL 
    #SQL
    DB[:conn].execute(sql)
-   binding.pry
+   #binding.pry
   end
  
 end
