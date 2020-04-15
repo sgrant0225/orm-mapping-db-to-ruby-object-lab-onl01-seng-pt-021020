@@ -73,7 +73,8 @@ class Student
   end  
   
   def self.students_below_12th_grade 
-   
+   sql = <<-SQL 
+   SELECT * FROM students WHERE  > 0;
   end  
  
 end
