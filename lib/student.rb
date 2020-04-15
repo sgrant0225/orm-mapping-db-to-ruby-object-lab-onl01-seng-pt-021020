@@ -97,5 +97,6 @@ class Student
    SQL
    DB[:conn].execute(sql).collect do |i|
      self.new_from_db(i).first
+    end
    end 
 end
